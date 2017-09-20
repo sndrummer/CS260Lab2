@@ -2,3 +2,32 @@
 html, body, form, {
     margin: 0;
 }
+
+
+h1 {
+    text-align: center;
+}
+
+#linkbutton {
+    background-color: blue;
+    padding: 4px;
+    margin: 4px;
+}
+
+.anice {
+    text-decoration: none;
+    margin: 4px;
+
+}
+
+#easy {
+    
+}
+
+#medium {
+
+}
+
+#hard {
+
+}
