@@ -16,15 +16,16 @@ function start() {
         startTime = new Date();
         started = setInterval(runClock, 10);
         running = true;
-        document.getElementById("personal-best").innerHTML = "00:00.000";
+        
     }
    	
 }
 
+//Reset is called onClick of the icon
 function reset() {
     if (running == true) {
         if (scores.length <= 9) {
-            
+            document.getElementById("previous-time").innerHTML = "00:00.000";
             //times.push(getTimeElapsed());
             console.log("You made it this far!!!!");
             var score = new Score(getTimeElapsed());
@@ -35,7 +36,7 @@ function reset() {
             console.log("ms " + score.ms);
             
            // scores.push(curTimerValue);
-            var id = "personal-best";
+            var id = "previous-time";
             if (scores.length == 10) {
                 console.log(scores.length);
                   console.log("you are here...");
@@ -53,6 +54,7 @@ function reset() {
                 , personalBest = null
                 , curTimerValue = 0
                 , scores = [];
+                return;
               }
               else{
                 displayTime(id, getTimeElapsed());
@@ -64,11 +66,13 @@ function reset() {
                  startTime = null;
                  document.getElementById("display-area").innerHTML = "00:00.000";
                  running = false;
+                 
               }
            
         }
       
     }
+     start();
 }
 
 function runClock(id){

@@ -10,23 +10,30 @@
 
     <h1>Begin</h1>
 
+     
     <div id="play-area">
-	<p>hello</p>        
+    <p>hello</p>        
+    <!--TODO: add a div for the icon that as onClick="reset()", this will have the timer reset and store the previous time
+    each time it is clicked, the div position will be randomized in functionality.js I think that is has to have position absolute to work-->
     </div>
 
     <div>
             <output id="display-area">00:00.000</output>
     </div>
     <div>
-            <output id="personal-best">00:00.000</output>
+            <output id="previous-time">00:00.000</output>
     </div>
 
+    
 
         <!--This is the div for the Timer, should go at the bottom  -->
         <div id="timer">
             <button id="toggle-button" onClick="start()">Start</button>
+            <!--Will remove reset button later  this is just to make sure it works properly when clicked--> 
             <button id="reset-button" onClick="reset()">Reset</button>
         </div>
+
+       
 
 </body>
 <script type="text/javascript" src="functionality.js"></script>
