@@ -13,8 +13,18 @@
      
     <div id="play-area">
     <p>hello</p>        
-    <!--TODO: add a div for the icon that as onClick="reset()", this will have the timer reset and store the previous time
+    <!--TODO: add a div for the icon that as onmousedown="reset()", this will have the timer reset and store the previous time
     each time it is clicked, the div position will be randomized in functionality.js I think that is has to have position absolute to work-->
+
+    <div id="icon">icon</div> 
+    <!-- EXAMPLE, Please change if needed
+        <div>
+<img id="demp" src="./omna.jpg"  style="position:absolute; left: 400; top: 100; width: 200;      height: 200;"/>
+</div> 
+    -->
+    
+        
+    
     </div>
 
     <div>
@@ -29,6 +39,10 @@
         <!--This is the div for the Timer, should go at the bottom  -->
         <div id="timer">
             <button id="toggle-button" onClick="start()">Start</button>
+            <button id="toggle-button" onClick="easyStart()">Easy</button>
+            <button id="toggle-button" onClick="mediumStart()">Medium</button>
+            <button id="toggle-button" onClick="hardStart()">Hard</button>
+
             <!--Will remove reset button later  this is just to make sure it works properly when clicked--> 
             <button id="reset-button" onClick="reset()">Reset</button>
         </div>

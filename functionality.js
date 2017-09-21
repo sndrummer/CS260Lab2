@@ -156,6 +156,7 @@ function printScore(min,sec,ms)
     (ms > 99 ? ms : ms > 9 ? "0" + ms : "00" + ms);
     console.log("Here is the scoreScrting: " + scoreString + "\n");
     var feedback = "\n";
+    console.log("seconds!!!!: " + sec + " ms: " + ms);
     if (min >= 1 || sec >= 10) {
         feedback = "Are you okay? Need to work on those reflexes";
     }
@@ -163,19 +164,19 @@ function printScore(min,sec,ms)
     {
         feedback += "Bad";
     }
-    else if(sec > 1)
+    else if(sec >= 1)
     {
         feedback += "Okay";
     }
-    else if(sec > 700)
+    else if(ms >= 700)
     {
         feedback += "Good";
     }
-    else if(ms > 500)
+    else if(ms >= 500)
     {
         feedback += "Great!!";
     }
-    else if(ms > 450)
+    else if(ms >= 450)
     {
         feedback += "Awesome!!";
     }
@@ -198,4 +199,26 @@ function Score(time)
         , this.sec = timeValue.getUTCSeconds()
         , this.ms = timeValue.getUTCMilliseconds();
 };
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////******************   PLAY AREA FUNCTIONALITY AND RANDOMIZATION OF ICON POSITION */
+/*
+<button id="toggle-button" onClick="easyStart()">Easy</button>
+            <button id="toggle-button" onClick="mediumStart()">Medium</button>
+            <button id="toggle-button" onClick="hardStart()">Hard</button>
+*/
+
+function easyStart(){
+    document.getElementById("icon").classList.add('easy');
+    start();
+}
+
+function mediumStart(){
+    document.getElementById("icon").classList.add('medium');
+    start();
+}
+
+function hardStart(){
+    document.getElementById("icon").classList.add('hard');
+    start();
+}
 ;
