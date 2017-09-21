@@ -20,6 +20,17 @@ h1 {
 
 }
 
+#play-area {
+    height: 400px;
+    width: 80%;
+    background-color: rgb(100,100,100);
+    border: ridge 4px black;
+}
+
+#timer {
+    position: center;
+}
+
 #easy {
     
 }
