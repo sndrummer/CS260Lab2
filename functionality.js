@@ -23,6 +23,8 @@ function start() {
 
 //Reset is called onClick of the icon
 function reset() {
+    //Each time reset is called the icon randomizes location!!
+    randomizeLocation();
     if (running == true) {
         if (scores.length <= 9) {
             document.getElementById("previous-time").innerHTML = "00:00.000";
@@ -155,7 +157,7 @@ function printScore(min,sec,ms)
     (sec > 9 ? sec : "0" + sec) + "." + 
     (ms > 99 ? ms : ms > 9 ? "0" + ms : "00" + ms);
     console.log("Here is the scoreScrting: " + scoreString + "\n");
-    var feedback = "\n";
+    var feedback = "\nPerformance: " + "\n"; 
     console.log("seconds!!!!: " + sec + " ms: " + ms);
     if (min >= 1 || sec >= 10) {
         feedback = "Are you okay? Need to work on those reflexes";
@@ -209,16 +211,28 @@ function Score(time)
 
 function easyStart(){
     document.getElementById("icon").classList.add('easy');
+    randomizeLocation();
     start();
 }
 
 function mediumStart(){
     document.getElementById("icon").classList.add('medium');
+    randomizeLocation();
     start();
 }
 
 function hardStart(){
     document.getElementById("icon").classList.add('hard');
+    randomizeLocation();
     start();
 }
-;
+
+function randomizeLocation(){
+   // document.getElementById("demo").style.top=2000 + "px";
+console.log("RANDOMIZING!!!!");
+var icon = document.getElementById("icon");
+var main = document.getElementById("play-area");
+console.log("icon left B4: " + icon.style.left);
+icon.style.left = (Math.random() * main.offsetWidth - icon.offsetWidth) + "px";
+icon.style.top = (Math.random() * main.offsetHeight - icon.offsetHeight) + "px";
+};

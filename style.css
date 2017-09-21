@@ -20,25 +20,58 @@ h1 {
 
 }
 
+
+/*
 #play-area {
     height: 400px;
     width: 80%;
     background-color: rgb(100,100,100);
     border: ridge 4px black;
 }
+*/
+
 
 #timer {
     position: center;
 }
 
-#easy {
+
+.easy {
     
 }
 
-#medium {
+.medium {
 
 }
 
-#hard {
+.hard {
 
 }
+
+/*TESTING RANDOM*/
+.main {
+    width: 1400px;
+    height: 800px;
+    background: #f0f0f0;
+    position: relative;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background: #e00;
+    border-radius: 50px;
+    position: absolute;
+    /* parent width - box width */
+  }
+
+  #icon{
+    width: 50px;
+    height: 50px;
+    background: #e00;
+    border-radius: 50px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    /* parent width - box width */
+  }
