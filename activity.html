@@ -12,18 +12,24 @@
     
     <div style="cursor:crosshair"  class="main" id = "play-area">
             <img id="icon" src="http://ec2-18-220-156-125.us-east-2.compute.amazonaws.com/CS260Lab2/Martin-Berube-Flat-Animal-Bunny.ico" alt="cute animated bunny" onmousedown="reset()"></img>
+
     </div>
-    <div>
+
+
+
+    <div style="position: absolute; left: 50%; bottom: -4%; padding-bottom: 10px;">
+
+    <div style="position: relative; left -50%">
             <output id="display-area">00:00.000</output>
     </div>
-    <div>
+    <div style="position: relative; left -50%">
             <output id="previous-time">00:00.000</output>
     </div>
 
     
 
         <!--This is the div for the Timer, should go at the bottom  -->
-        <div id="timer">
+        <div id="timer" style="position: relative; left -50%">
             <!--<button id="toggle-button" onClick="start()">Start</button> -->
             <button id="toggle-button" onClick="easyStart()">Easy</button>
             <button id="toggle-button" onClick="mediumStart()">Medium</button>
@@ -32,7 +38,9 @@
             
         </div>
 
+    </div>
        
+
 
 </body>
 <script type="text/javascript" src="functionality.js"></script>
