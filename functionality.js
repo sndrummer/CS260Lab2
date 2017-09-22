@@ -210,21 +210,24 @@ function Score(time)
 */
 
 function easyStart(){
-    document.getElementById("icon").classList.add('easy');
+    document.getElementById("icon").style.width = "100px";
+    document.getElementById("icon").style.height = "100px";
     randomizeLocation();
-    start();
+   // start();
 }
 
 function mediumStart(){
-    document.getElementById("icon").classList.add('medium');
+    document.getElementById("icon").style.width = "75px";
+    document.getElementById("icon").style.height = "75px";
     randomizeLocation();
-    start();
+    //start();
 }
 
 function hardStart(){
-    document.getElementById("icon").classList.add('hard');
+    document.getElementById("icon").style.width = "50px";
+    document.getElementById("icon").style.height = "50px";
     randomizeLocation();
-    start();
+    //start();
 }
 
 function randomizeLocation(){
